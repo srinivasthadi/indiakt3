@@ -1,0 +1,14 @@
+
+
+<router-outlet></router-outlet>
+
+<button style="margin: 20px" mat-raised-button color="primary"
+(click)="logoutUser()">LogOut</button>
+
+<div *ngIf="authService.userData as userData">
+    <div> {{userData.uid}} </div>   
+    <div><strong>{{userData.email}}</strong></div>    
+     <div><h3>Hello: <strong>{{(userData.displayName) ? 
+            userData.displayName : 'User'}}</strong></h3>
+     </div>
+</div>
